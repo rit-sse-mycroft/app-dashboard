@@ -8,6 +8,9 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
+var mycroft = require('./lib/mycroft');
+var io = require('socket.io');
+var net = require('net');
 
 var app = express();
 
