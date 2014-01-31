@@ -1,2 +1,3 @@
-app-dashboard
-=============
+# Dashboard
+
+The web dashboard for mycroft
