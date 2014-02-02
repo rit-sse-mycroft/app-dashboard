@@ -27,13 +27,12 @@ html
         #main.col-sm-9.col-md-10.col-xs-12.pull-right
           block content
         #sidebar.col-sm-3.col-md-2.col-xs-12.pull-left
-          .container-fluid
-            ul.nav.nav-sidebar
-              li
-                a Overview
-              li
-                a Apps
-              li
-                a Logs
-              li
-                a Statistics
+          ul.nav.nav-sidebar
+            li
+              a.overview(href='/') Home
+            li
+              a.apps(href='/apps') Apps
+            li
+              a.logs(href='/logs') Logs
+            li
+              a.statistcs(href='/statistics') Statistics
