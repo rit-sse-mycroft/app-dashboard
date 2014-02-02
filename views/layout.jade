@@ -3,5 +3,37 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
+    script(src='/socket.io/socket.io.js')
+    script(src='/jquery/jquery.min.js')
+    script(src='/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/javascripts/sidebar.js')
   body
-    block content
+    .navbar.navbar-inverse.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle(type="button" data-toggle="collapse" data-target="#navcollapse")
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') Mycroft
+        .collapse.navbar-collapse#navcollapse
+          ul.nav.navbar-nav.pull-right
+            li
+              a(href='/login') Login
+    .container-fluid
+      .row
+        #main.col-sm-9.col-md-10.col-xs-12.pull-right
+          block content
+        #sidebar.col-sm-3.col-md-2.col-xs-12.pull-left
+          .container-fluid
+            ul.nav.nav-sidebar
+              li
+                a Overview
+              li
+                a Apps
+              li
+                a Logs
+              li
+                a Statistics
