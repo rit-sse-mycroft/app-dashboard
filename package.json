@@ -10,6 +10,7 @@
     "jade": "*",
     "stylus": "*",
     "socket.io": "*",
-    "bower": "*"
+    "bower": "*",
+    "winston": "~0.7.2"
   }
 }

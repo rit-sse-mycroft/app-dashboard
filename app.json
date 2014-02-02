@@ -1,0 +1,14 @@
+{
+    "version": "0.0.1",
+    "name": "dashboard",
+    "displayName": "Admin Dashboard",
+    "instanceId": "dashboard",
+    "capabilities": {
+        "admin": "0.0.1"
+    },
+    "API": 0,
+    "description": "Provides an admin interface for mycroft.",
+    "dependencies": {
+        "log": "0.0.1"
+    }
+}

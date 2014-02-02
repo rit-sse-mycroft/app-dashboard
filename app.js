@@ -38,3 +38,8 @@ var server = http.createServer(app).listen(app.get('port'), function(){
 
 var io = require('socket.io').listen(server);
 
+var client = mycroft.Mycroft('./app.json', 'localhost', 1847 );
+
+client.connect();
+client.sendManifest();
+
