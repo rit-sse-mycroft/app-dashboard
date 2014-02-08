@@ -7,7 +7,7 @@ var express = require('express');
 var routes = require('./routes');
 var http = require('http');
 var path = require('path');
-var mycroft = require('./lib/mycroft');
+var mycroft = require('mycroft');
 var net = require('net');
 
 var app = express();
@@ -41,7 +41,7 @@ var server = http.createServer(app).listen(app.get('port'), function(){
 
 var io = require('socket.io').listen(server);
 
-var client = mycroft.Mycroft('./app.json', 'localhost', 1847 );
+var client = mycroft.Mycroft('dashboard', './app.json', 'localhost', 1847 );
 
 client.connect();
 client.sendManifest();
